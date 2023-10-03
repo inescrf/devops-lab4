@@ -25,8 +25,8 @@ jobs:
     - name: Run tests
       run: cd lab3 && npm test
 
-    - name: Upload debug log
-        uses: actions/upload-artifact@v2
-        with:
-          name: debug-log
-          path: /github/home/.npm/_logs/2023-10-03T09_52_49_950Z-debug.log
+    - name: Upload debug logs
+      uses: actions/upload-artifact@v2
+      with:
+        name: debug-logs
+        path: /github/home/.npm/_logs/*
