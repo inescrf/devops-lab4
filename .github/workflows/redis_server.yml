@@ -17,3 +17,12 @@ jobs:
         ports:
           # Opens tcp port 6379 on the host and service container
           - 6379:6379
+        # Ajoutez les options de transport ici
+        env:
+          TRANSPORT: Transport.REDIS
+          OPTIONS: |
+            {
+              "url": "redis://localhost:6379", // your URL
+              "retryAttempts": 10,
+              "retryDelay": 3000 // in milliseconds
+            }
